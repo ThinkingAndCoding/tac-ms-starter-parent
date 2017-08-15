@@ -4,6 +4,7 @@ import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.tac.ms.tacmscommonstartbase.dto.CommonResponse;
 import org.tac.ms.tacmsrobotlogic.vo.Communication;
@@ -18,7 +19,7 @@ public class CommunicationController {
     @ApiResponses(value = { @ApiResponse(code = 500, message = "系统异常")
                             ,@ApiResponse(code = 200, message = "success",response = Communication.class) })
     @RequestMapping(value = "/comunicate" ,consumes = "application/json",method = {RequestMethod.POST})
-    public CommonResponse comunicate(@RequestBody Communication communication, BindingResult bindingResult){
+    public CommonResponse comunicate(@RequestBody @Validated Communication communication, BindingResult bindingResult){
         return new CommonResponse(200, "OK", "你好!");
     }
 

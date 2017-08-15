@@ -3,11 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>tac-ms-robot-logic</artifactId>
+	<artifactId>tac-ms-user-center</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>tac-ms-robot-logic</name>
-	<description>Demo project for Spring Boot</description>
+	<name>tac-ms-user-center</name>
+	<description>用户中心</description>
 
 	<parent>
 		<groupId>org.tac.ms</groupId>
@@ -16,7 +17,6 @@
 	</parent>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.tac.ms</groupId>
 			<artifactId>tac-ms-common-start-base</artifactId>
@@ -68,7 +68,6 @@
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>-->
 	</dependencies>
-
 	<build>
 		<plugins>
 
@@ -111,5 +110,4 @@
 
 		</plugins>
 	</build>
-
 </project>
