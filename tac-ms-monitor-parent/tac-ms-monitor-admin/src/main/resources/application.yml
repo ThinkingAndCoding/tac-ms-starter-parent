@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: springbootadmin
+  cloud:
+    config:
+      enabled: false
+  boot:
+    admin:
+      notify:
+        mail:
+          from: zhangsan@tac.com
+          to: lisi@tac.com
+          enabled: true
+
+  mail:
+    username: zhangsan@tac.com
+    password: zhangsan
+    host: smtp.qiye.163.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+    port: 25
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://127.0.0.1:11111/eureka/
+    register-with-eureka: false
+
+management.security.enabled: false
+spring.boot.admin.routes.endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+security:
+  user:
+    name: sba
+    password: 123456
+  basic:
+    enabled: false
+
+server:
+  port: 9410
